@@ -1,3 +1,7 @@
+// Для перевірки треба спочатку запустити сервер через команду npx live-server
+// Та потім викликати команду node tests/task2.test.js
+// Результатом виклику повинен бути текст: Місто користувача співпадає з очікуваним результатом.
+
 const puppeteer = require('puppeteer');
 
 (async () => {
@@ -5,7 +9,7 @@ const puppeteer = require('puppeteer');
   const page = await browser.newPage();
 
   
-  await page.goto('http://127.0.0.1:5500/index.html');
+  await page.goto('http://127.0.0.1:8080/index.html');
 
 
   const userName = 'Leanne Graham'; 

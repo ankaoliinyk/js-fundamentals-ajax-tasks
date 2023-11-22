@@ -1,9 +1,13 @@
+// Для перевірки треба спочатку запустити сервер через команду npx live-server
+// Та потім викликати команду node tests/task1.test.js
+// Результатом виклику повинен бути текст: Користувачі відображені на сторінці.
+
 const puppeteer = require('puppeteer');
 
 async function checkUsersDisplayed() {
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
-  await page.goto('http://127.0.0.1:5500/'); 
+  await page.goto('http://127.0.0.1:8080/'); 
 
   
   const userList = await page.$('.usersList');
